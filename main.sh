@@ -40,9 +40,19 @@ EOF
 customize_bashrc() {
   echo "Customizing .bashrc with a stylish prompt..."
   cat << 'EOF' >> ~/.bashrc
+# Color variables
+GREEN='\033[0;32m'
+CYAN='\033[0;36m'
+YELLOW='\033[1;33m'
+RESET='\033[0m'
 
+# Git branch function
+git_branch() {
+    git branch 2> /dev/null | grep '*' | awk '{print >
+}
+PS1='${GREEN}Termux@\h ${CYAN}\w ($(git_branch)) \n${YELLOW}➤ ${RESET}'
 # Clean, programmer-themed prompt
-PS1='\033[1;34m\u@\h:\033[1;32m\w\033[0m $ '
+# PS1='\033[1;34m\u@\h:\033[1;32m\w\033[0m $ '
 
 # Additional developer-friendly aliases
 alias update-all="pkg update -y && pkg upgrade -y && apt autoremove -y"
