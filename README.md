@@ -39,5 +39,5 @@ This script automates the setup of a complete development environment in Termux,
 
 ## Installation Instructions
 
-1. **run this command**: ```bash bash <(curl https://letsedit.cloudns.be/termux-dev.sh/main.sh)
+1. **run this command**: ``` bash <(curl https://letsedit.cloudns.be/termux-dev.sh/main.sh)```
 2. **After running previous command & execute complete**: Exit and restart termux 
